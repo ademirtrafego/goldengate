@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golden Gate Immigration Law | Proteção Humanitária Federal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/css/intlTelInput.css">
+    
+    <style>
+        body { font-family: 'Montserrat', sans-serif; }
+        .font-law { font-family: 'Cinzel', serif; }
+        .bg-usa-blue { background-color: #0A1E41; }
+        .bg-usa-red { background-color: #B22234; }
+        .border-usa-red { border-color: #B22234; }
+        .iti { width: 100%; } /* Ajuste do input de telefone */
+        .iti__border-gray-100 { border-color: #f3f4f6; }
+    </style>
+</head>
+<body class="bg-slate-50">
+
+    <header class="py-4 bg-white border-b-2 border-usa-red sticky top-0 z-50 shadow-xl">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex flex-col">
+                <span class="font-law text-xl md:text-2xl text-usa-blue leading-none">GOLDEN GATE</span>
+                <span class="text-xs tracking-[0.3em] font-bold text-usa-red">IMMIGRATION LAW</span>
+            </div>
+            <div class="text-right hidden sm:block">
+                <p class="text-[10px] font-bold text-gray-400 uppercase">Federal Practice</p>
+                <p class="text-usa-blue font-bold">+1 (321) 732-2806</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="relative bg-usa-blue py-16 text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1473300181477-177601651e24?auto=format&fit=crop&q=80')] bg-cover bg-center"></div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h1 class="font-law text-3xl md:text-5xl mb-6">DEFENDENDO SEU DIREITO DE <span class="text-usa-red">RECOMEÇAR</span></h1>
+            <p class="text-lg md:text-xl max-w-2xl mx-auto font-light leading-relaxed">
+                Especialistas em casos complexos de Asilo, VAWA e Defesa contra Deportação. 
+                Se você está nos EUA e teme pelo seu futuro, a **Golden Gate** é a sua fortaleza jurídica.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white shadow-2xl rounded-sm border-t-8 border-usa-blue p-8 md:p-12">
+                <h2 class="text-2xl font-bold text-usa-blue mb-2 uppercase text-center">Análise de Elegibilidade Humanitária</h2>
+                <p class="text-center text-gray-500 mb-10 text-sm">Responda com sinceridade. O sigilo é garantido pelo privilégio advogado-cliente.</p>
+
+                <form id="qualifierForm" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        
+                        <div class="col-span-2 md:col-span-1">
+                            <label class="block text-xs font-bold uppercase mb-2 text-usa-blue">Nome Completo</label>
+                            <input type="text" id="name" placeholder="Como no passaporte" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-usa-blue outline-none" required>
+                        </div>
+
+                        <div class="col-span-2 md:col-span-1">
+                            <label class="block text-xs font-bold uppercase mb-2 text-usa-blue">Telefone Americano (Somente USA)</label>
+                            <input type="tel" id="phone" class="w-full p-3 border border-gray-300 rounded focus:ring-2 focus:ring-usa-blue outline-none" required>
+                            <span id="valid-msg" class="hidden text-green-600 text-[10px] font-bold">✓ Número Válido</span>
+                            <span id="error-msg" class="hidden text-red-600 text-[10px] font-bold">✗ Número Inválido</span>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase mb-2 text-usa-blue">Como você entrou nos EUA?</label>
+                            <select id="entry" class="w-full p-3 border border-gray-300 rounded outline-none">
+                                <option value="Fronteira">Pela Fronteira (Caiu no CBP)</option>
+                                <option value="Visto Turismo">Com Visto de Turismo/Outro</option>
+                                <option value="Não Detectado">Entrada sem inspeção (EWI)</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase mb-2 text-usa-blue">Você tem data de Corte (NTA)?</label>
+                            <select id="court" class="w-full p-3 border border-gray-300 rounded outline-none font-bold text-usa-red">
+                                <option value="Não">Não possuo corte</option>
+                                <option value="Sim - Urgente">Sim, já tenho data marcada</option>
+                                <option value="Perdi a data">Perdi minha data de corte</option>
+                            </select>
+                        </div>
+
+                        <div class="col-span-2">
+                            <label class="block text-xs font-bold uppercase mb-2 text-usa-blue">Qual situação melhor descreve seu caso?</label>
+                            <select id="reason" class="w-full p-3 border border-gray-300 rounded outline-none bg-blue-50">
+                                <option value="Asilo Político">Sofro perseguição no meu país (Asilo)</option>
+                                <option value="VAWA - Abuso">Sofro abuso de cônjuge/pai cidadão ou residente (VAWA)</option>
+                                <option value="Vítima de Crime">Fui vítima de crime nos EUA e ajudei a polícia (Visto U)</option>
+                                <option value="Tráfico Humano">Fui enganado/explorado no trabalho (Visto T)</option>
+                                <option value="Medo de Retorno">Tenho medo de voltar, mas não sei qual visto aplicar</option>
+                            </select>
+                        </div>
+
+                        <div class="col-span-2 md:col-span-1">
+                            <label class="block text-xs font-bold uppercase mb-2 text-usa-blue">Há quanto tempo está nos EUA?</label>
+                            <select id="time" class="w-full p-3 border border-gray-300 rounded outline-none">
+                                <option value="Menos de 1 ano">Menos de 1 ano (Prazo Crítico)</option>
+                                <option value="Entre 1 e 5 anos">Entre 1 e 5 anos</option>
+                                <option value="Mais de 10 anos">Mais de 10 anos</option>
+                            </select>
+                        </div>
+
+                        <div class="col-span-2 md:col-span-1">
+                            <label class="block text-xs font-bold uppercase mb-2 text-usa-blue">Possui filhos nascidos nos EUA?</label>
+                            <select id="children" class="w-full p-3 border border-gray-300 rounded outline-none">
+                                <option value="Sim">Sim, tenho filhos americanos</option>
+                                <option value="Não">Não possuo filhos americanos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="validateAndSend()" class="w-full bg-usa-blue hover:bg-usa-red text-white font-bold py-5 rounded transition duration-500 uppercase tracking-widest shadow-xl flex items-center justify-center gap-3">
+                        ENVIAR PARA ANÁLISE JURÍDICA <i class="fab fa-whatsapp text-xl"></i>
+                    </button>
+                    
+                    <p class="text-[10px] text-gray-400 text-center uppercase tracking-tighter">Golden Gate Immigration Law - Protegendo sua história nos Estados Unidos</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/intlTelInput.min.js"></script>
+    <script>
+        const input = document.querySelector("#phone");
+        const errorMsg = document.querySelector("#error-msg");
+        const validMsg = document.querySelector("#valid-msg");
+
+        // Inicializa o input apenas para USA
+        const iti = window.intlTelInput(input, {
+            onlyCountries: ["us"],
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@18.2.1/build/js/utils.js",
+        });
+
+        const reset = () => {
+            input.classList.remove("border-red-500");
+            errorMsg.classList.add("hidden");
+            validMsg.classList.add("hidden");
+        };
+
+        input.addEventListener('blur', () => {
+            reset();
+            if (input.value.trim()) {
+                if (iti.isValidNumber()) {
+                    validMsg.classList.remove("hidden");
+                } else {
+                    input.classList.add("border-red-500");
+                    errorMsg.classList.remove("hidden");
+                }
+            }
+        });
+
+        function validateAndSend() {
+            if (!iti.isValidNumber()) {
+                alert("Por favor, insira um número de telefone americano válido.");
+                return;
+            }
+
+            const data = {
+                nome: document.getElementById('name').value,
+                telefone: iti.getNumber(),
+                entrada: document.getElementById('entry').value,
+                corte: document.getElementById('court').value,
+                motivo: document.getElementById('reason').value,
+                tempo: document.getElementById('time').value,
+                filhos: document.getElementById('children').value
+            };
+
+            if(!data.nome) { alert("Nome é obrigatório"); return; }
+
+            const texto = `*NOVA ANÁLISE: GOLDEN GATE LAW*%0A%0A` +
+                          `*👤 Nome:* ${data.nome}%0A` +
+                          `*📞 Tel:* ${data.telefone}%0A` +
+                          `*🚀 Entrada:* ${data.entrada}%0A` +
+                          `*⚖️ Tem Corte?:* ${data.corte}%0A` +
+                          `*🛡️ Caso:* ${data.motivo}%0A` +
+                          `*📅 Tempo EUA:* ${data.tempo}%0A` +
+                          `*🇺🇸 Filhos USA:* ${data.filhos}%0A%0A` +
+                          `_Lead qualificado via Landing Page._`;
+
+            const phone = "13217322806";
+            window.open(`https://wa.me/${phone}?text=${texto}`, '_blank');
+        }
+    </script>
+</body>
+</html>
